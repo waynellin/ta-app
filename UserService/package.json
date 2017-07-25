@@ -1,0 +1,13 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"cd client && npm run start\" \"cd server && npm run start\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.4.0"
+  }
+}

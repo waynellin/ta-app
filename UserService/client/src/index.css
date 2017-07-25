@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800');
+html {
+  width: 100%;
+  height: 100%;
+}
+:global #root{
+    height:100%
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat";
+  background-color: #F5F5F5;
+  min-height: 100vh;
+}
+h1{
+    font-weight: 600;
+    font-size: 4em;
+}
+h2,h3,h4{
+    font-weight: 600;
+}
+h5{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+h6{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+:global .right-align{
+    float:right;
+}
+
+:global .see-more{
+    color:#333;
+    font-weight: 600;
+}
+:global .see-more:hover{
+    text-decoration: underline;
+}
+:global .centered{
+   text-align: center;
+}
+a{
+    color:#333;
+}
+a:hover{
+    color:#F50057;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+:global .btn-primary{
+    font-weight: 600;
+    font-size: 16px;
+    background-color:#F50057;
+    border:none;
+    padding:16px;
+}
+:global .btn-primary:hover{
+    background-color:#FF4081;
+    border:none
+}
+
+:global .btn-primary:active{
+    background-color:#C51162 !important;
+    border:none;
+}
+:global .invisible-button{
+    background: none;
+    border:none;
+}
+:global .invisible-button:active{
+    background-color:#EEEEEE !important;
+    border:none;
+}
+
+:global .btn-primary.btn-block{
+    background-color:#C51162 !important;
+    border:none;
+}
+:global .btn-primary:focus{
+    background-color:#F50057 !important;
+    border:none;
+}
+
+:global .btn-default{
+    font-weight: 600 ;
+    font-size: 16px;
+    padding:16px;
+}
+:global .fullheight{
+    height:100%;
+}
+:global  .fullheight-nonav{
+    height:calc(100vh - 82px);
+}

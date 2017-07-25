@@ -1,0 +1,56 @@
+import React, {Component} from "react";
+import {connect} from 'react-redux';
+import { Panel, Accordion, Glyphicon} from 'react-bootstrap';
+import { applicantClient } from "../../axiosClient";
+import {fetchApplicants} from "../../actions/applicantsActions";
+import { setSingleCourse, toggleComponent } from "../../actions/courseListingsActions";
+
+class ApplicantCourseLink extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: "123",
+            description: "456",
+            status: "789"
+        };
+        console.log(this.props)
+
+        this.link_course = this.link_course.bind(this);
+    }
+
+    link_course(e) {
+        e.preventDefault();
+        this.props.dispatch(setSingleCourse(this.state.title, this.state.description, this.state.status));
+        if(!this.props.show){
+            this.props.dispatch(toggleComponent());
+        }
+    }
+
+    getCourses(){
+        var courses = [this.props.courses][0][0];
+        return Object.keys(courses).map((course) => {
+            return (
+                <h5 style={{display:"inline",marginRight:16}} key={course} type="submit" ><a onClick={this.link_course}>{courses[course]}</a></h5>
+            );
+        });
+    }
+
+    render(){
+        return (
+            <div>
+                Course Rank: {this.getCourses()}
+            </div>
+        );
+    }
+}
+
+function mapStateToProps(state) {
+    return {
+        applicants: state.applicants,
+        user: state.user,
+        courses: state.courses
+    }
+
+}
+
+export default connect(mapStateToProps)(ApplicantCourseLink);

@@ -1,0 +1,28 @@
+{
+  "name": "proj-awol",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha --recursive",
+    "initdb": "node ./scripts/fillcourses.js && node ./scripts/createusers.js"
+  },
+  "dependencies": {
+    "async-foreach": "^0.1.3",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.8.5",
+    "morgan": "~1.7.0",
+    "node-rest-client": "^3.0.7",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0"
+  }
+}

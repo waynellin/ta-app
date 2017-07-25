@@ -1,0 +1,9 @@
+{
+  "name": "Ta-APP",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "concurrently --kill-others \"cd UserService/client && npm run start\" \"cd UserService/server && npm run start\" \"cd ta-corrd-service && npm start\" \"cd ApplicantService && npm start\"",
+    "install_all": "concurrently \"cd UserService/client && npm install\" \"cd UserService/server && npm install\" \"cd ta-corrd-service && npm install\" \"cd ApplicantService && npm install\""
+  },
+  "dependencies": {}
+}
